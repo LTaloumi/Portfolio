@@ -592,20 +592,34 @@ img {
   overflow: hidden;
 }
 
+/* Centrer les logos des entreprises */
 .company-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 1.5rem;
-  flex-shrink: 0;
-  border: 2px solid var(--first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
 }
 
 .company-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Ou plus spécifiquement si vous voulez que l'image elle-même soit centrée */
+.company-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .experience-title {
@@ -1240,4 +1254,5 @@ img {
     width: 550px;
     height: 550px;
   }
+
 }
